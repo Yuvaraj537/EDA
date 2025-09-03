@@ -387,3 +387,89 @@ Feature selection is the process of selecting the **most relevant features** (co
 ---
 
 **Tip:** Feature selection is especially important for datasets with **many features** to improve **model interpretability and efficiency**.
+---
+# 📦 Feature Binning
+
+**Definition:**  
+Feature binning (also called discretization) converts **continuous numerical features** into **categorical bins**.  
+This can help:  
+- Reduce noise  
+- Handle outliers  
+- Improve model performance for some algorithms  
+
+---
+
+## 🔹 Types of Feature Binning
+
+### 1️⃣ Equal Width Binning
+- **Idea:** Divide the range of values into **bins of equal size**.  
+- **Example:** Age data `[18, 22, 25, 30, 35, 40, 45]`  
+  - Range = 45 - 18 = 27  
+  - 3 bins → width = 27 / 3 = 9  
+  - Bins: 18–27, 27–36, 36–45  
+  - Resulting categories: `[18–27, 18–27, 18–27, 27–36, 27–36, 36–45, 36–45]`
+
+---
+
+### 2️⃣ Equal Frequency Binning
+- **Idea:** Divide the values so that **each bin contains the same number of data points**.  
+- **Example:** Age data `[18, 22, 25, 30, 35, 40, 45]`  
+  - 3 bins → ~2–3 values per bin  
+  - Bins: `[18, 22, 25]`, `[30, 35]`, `[40, 45]`  
+  - Resulting categories: `[Bin1, Bin1, Bin1, Bin2, Bin2, Bin3, Bin3]`
+
+---
+
+### 3️⃣ Supervised Binning (Entropy-based)
+- **Idea:** Use the **target variable** to determine optimal bin splits.  
+- **How:**  
+  - Find cut points that **maximize information gain** or reduce entropy.  
+- **Example:**  
+  - Feature: Age  
+  - Target: Heart Disease (Yes/No)  
+  - Bins chosen based on which age ranges best separate **Yes vs No** outcomes.
+
+---
+
+### ✅ Summary Table
+
+| Method                  | How it Works                                 | Example                       |
+|-------------------------|----------------------------------------------|-------------------------------|
+| Equal Width Binning      | Bins have same range                        | 18–27, 27–36, 36–45          |
+| Equal Frequency Binning  | Bins have same number of points             | [18,22,25], [30,35], [40,45] |
+| Supervised (Entropy-based)| Uses target variable to choose splits       | Age bins best separating Heart Disease Yes/No |
+
+---
+
+**Tip:** Feature binning is useful for models that **don’t handle continuous variables well** (like Naive Bayes) or for **simplifying data** before analysis.
+---
+
+# ⚠️ Outlier Treatment
+
+**Definition:**  
+Outlier treatment is the process of **handling extreme values** in your dataset to prevent them from **distorting analysis or model performance**.  
+
+---
+
+## 1️⃣ Why Treat Outliers?
+- Outliers can **skew mean, standard deviation, and correlations**.  
+- They may **mislead machine learning models**, especially sensitive ones like Linear Regression or KNN.  
+- Helps improve **accuracy, stability, and reliability** of models.  
+
+---
+
+## 2️⃣ Common Methods to Treat Outliers
+
+### **1️⃣ Removal**
+- **Idea:** Remove data points that are clearly outliers.  
+- **Use Case:** Small datasets or when the outlier is clearly an **error**.  
+- **Example (IQR Method):**  
+```python
+import pandas as pd
+
+Q1 = df['Age'].quantile(0.25)
+Q3 = df['Age'].quantile(0.75)
+IQR = Q3 - Q1
+
+df = df[(df['Age'] >= Q1 - 1.5*IQR) & (df['Age'] <= Q3 + 1.5*IQR)]
+---
