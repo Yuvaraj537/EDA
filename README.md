@@ -15,7 +15,7 @@ It helps in:
 
 ---
 
-# Feature Engineering
+# Feature Scaling
 
 # ⚖️ Normalization (Min-Max Scaling)
 
