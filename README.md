@@ -14,6 +14,9 @@ It helps in:
 - 🤖 Preparing data for machine learning models  
 
 ---
+
+# Feature Engineering
+
 # ⚖️ Normalization (Min-Max Scaling)
 
 ## 🔹 What it is
@@ -212,4 +215,60 @@ Data that can be **measured or counted** and is numeric.
 | Qualitative   | Ordinal    | Rating, Education Level, Satisfaction   |
 | Quantitative  | Discrete   | No. of students, Goals, Cars            |
 | Quantitative  | Continuous | Height, Weight, Temperature             |
+
+
+
+---
+
+# 4️⃣ Data Visualization
+
+Data visualization helps to **understand patterns, trends, and relationships** in your data.  
+It can be categorized based on the number of variables analyzed.
+
+---
+
+## 📊 1. Univariate Analysis
+- **Definition:** Analyzing **one variable** at a time to understand its **distribution, frequency, or proportion**.  
+- **Common Plots:**  
+  - **Histogram:** Shows the frequency distribution of numerical data  
+  - **Bar Plot:** Displays categorical data counts  
+  - **Pie Chart:** Shows proportion of categories  
+
+**Example:**  
+- Dataset: Student grades in a class  
+- Visualization: Histogram to show how many students scored in each grade range  
+
+---
+
+## 📉 2. Bivariate Analysis
+- **Definition:** Analyzing the **relationship between two variables**.  
+- **Common Plots:**  
+  - **Scatter Plot:** Shows correlation between two numerical variables  
+  - **Correlation Heatmap:** Shows pairwise correlation values between variables  
+
+**Example:**  
+- Dataset: Study hours vs Exam scores  
+- Visualization: Scatter plot to check if more study hours lead to higher scores  
+
+---
+
+## 📈 3. Multivariate Analysis
+- **Definition:** Analyzing **three or more variables** to identify patterns, interactions, or outliers.  
+- **Common Plots:**  
+  - **Pair Plot:** Visualizes pairwise relationships among multiple numerical variables  
+  - **Box Plot:** Shows distribution and outliers of a numerical variable across categories  
+
+**Example:**  
+- Dataset: Students’ study hours, sleep hours, and exam scores  
+- Visualization: Pair plot to see how all three variables relate to each other  
+
+---
+
+## ✅ Summary Table
+
+| Analysis Type       | Purpose                              | Plots/Charts                                | Example |
+|--------------------|--------------------------------------|--------------------------------------------|---------|
+| Univariate          | Single variable distribution        | Histogram, Bar Plot, Pie Chart             | Student grades histogram |
+| Bivariate           | Relationship between 2 variables    | Scatter Plot, Correlation Heatmap          | Study hours vs Exam scores |
+| Multivariate        | Interaction among 3+ variables      | Pair Plot, Box Plot                         | Study hours, Sleep, Exam scores |
 
