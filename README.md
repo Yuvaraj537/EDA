@@ -160,4 +160,56 @@ This is important for algorithms like:
 
 ---
 
+# 📌 Types of Data
+
+In statistics and machine learning, data can be broadly classified into **Qualitative (Categorical)** and **Quantitative (Numerical)** data.  
+
+---
+
+## 1️⃣ Qualitative (Categorical) Data
+Data that describes **qualities or categories**. Usually not numeric, though sometimes represented with numbers.  
+
+### 🔹 Nominal
+- **Definition:** Categories **without any order**.  
+- **Examples:**  
+  - Gender: Male, Female  
+  - Colors: Red, Blue, Green  
+  - Blood Group: A, B, AB, O  
+
+### 🔹 Ordinal
+- **Definition:** Categories **with a meaningful order**, but differences between them are not numeric.  
+- **Examples:**  
+  - Rating: Low, Medium, High  
+  - Education Level: High School < Bachelor < Master < PhD  
+  - Satisfaction: Unsatisfied < Neutral < Satisfied  
+
+---
+
+## 2️⃣ Quantitative (Numerical) Data
+Data that can be **measured or counted** and is numeric.  
+
+### 🔹 Discrete
+- **Definition:** Countable values, often integers.  
+- **Examples:**  
+  - Number of students in a class: 25, 30, 40  
+  - Number of cars in a parking lot: 10, 12, 15  
+  - Number of goals in a football match: 0, 1, 2  
+
+### 🔹 Continuous
+- **Definition:** Measurable values that can take **any value within a range**, including decimals.  
+- **Examples:**  
+  - Height of students: 150.5 cm, 172.3 cm  
+  - Weight of objects: 60.2 kg, 75.5 kg  
+  - Temperature: 36.6°C, 37.8°C  
+
+---
+
+## ✅ Summary Table
+
+| Type          | Subtype    | Example                                 |
+|---------------|------------|-----------------------------------------|
+| Qualitative   | Nominal    | Gender, Colors, Blood Group             |
+| Qualitative   | Ordinal    | Rating, Education Level, Satisfaction   |
+| Quantitative  | Discrete   | No. of students, Goals, Cars            |
+| Quantitative  | Continuous | Height, Weight, Temperature             |
 
