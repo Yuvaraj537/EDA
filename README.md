@@ -272,3 +272,71 @@ It can be categorized based on the number of variables analyzed.
 | Bivariate           | Relationship between 2 variables    | Scatter Plot, Correlation Heatmap          | Study hours vs Exam scores |
 | Multivariate        | Interaction among 3+ variables      | Pair Plot, Box Plot                         | Study hours, Sleep, Exam scores |
 
+---
+# 🔧 Feature Engineering
+
+## 🔹 What is Feature Engineering?
+**Feature Engineering** is the process of **creating, transforming, or selecting variables (features)** in a dataset to improve the performance of machine learning models.  
+
+It is one of the **most important steps in the ML pipeline** because the quality and relevance of features directly affect model accuracy.
+
+---
+
+## 🔹 Why Feature Engineering is Important
+- Improves **model performance** by providing better input data.  
+- Helps algorithms **learn patterns** more effectively.  
+- Can **reduce noise** and remove irrelevant features.  
+- Allows **encoding of domain knowledge** into features.  
+
+---
+
+## 🔹 Types of Feature Engineering
+
+### 1. **Feature Creation**
+- **Definition:** Generate new features from existing ones to capture important patterns.  
+- **Examples:**  
+  - Combining features: `Total_Purchase = Price * Quantity`  
+  - Extracting date components: `Year`, `Month`, `Day` from `Order_Date`  
+  - Text-based features: Count of words, sentiment score  
+
+---
+
+### 2. **Feature Transformation**
+- **Definition:** Modify features to improve model performance.  
+- **Examples:**  
+  - **Scaling / Normalization:** Min-Max scaling to bring features to [0,1]  
+  - **Standardization:** Z-score scaling to mean 0 and std 1  
+  - **Log / Box-Cox Transformation:** To reduce skewness  
+  - **Polynomial Features:** `x^2`, `x*y` to capture non-linear relationships  
+
+---
+
+### 3. **Feature Encoding**
+- **Definition:** Convert categorical variables into numerical form for ML models.  
+- **Examples:**  
+  - **One-Hot Encoding:** `Color: Red, Blue → [1,0], [0,1]`  
+  - **Label Encoding:** Assign integers to categories  
+  - **Target Encoding:** Encode categories based on target statistics  
+
+---
+
+### 4. **Feature Selection**
+- **Definition:** Select the most relevant features to reduce complexity and improve performance.  
+- **Examples:**  
+  - **Correlation-based Selection:** Remove highly correlated features  
+  - **Recursive Feature Elimination (RFE)**  
+  - **Tree-based Feature Importance**  
+
+---
+
+### 🔹 Summary
+| Type                  | Purpose |
+|-----------------------|---------|
+| Feature Creation       | Generate new features from existing ones |
+| Feature Transformation | Modify features for better learning |
+| Feature Encoding       | Convert categorical variables to numeric |
+| Feature Selection      | Keep only the most relevant features |
+
+---
+
+**Tip:** Good feature engineering often **outperforms sophisticated models**. Investing time in creating and refining features can significantly boost model accuracy.
