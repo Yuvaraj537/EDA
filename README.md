@@ -74,3 +74,90 @@ X_{norm} = \frac{X - X_{min}}{X_{max} - X_{min}}
 
 **Normalized Ages:** `[0, 0.25, 0.5, 1]`
 ---
+# StandardScaler in Machine Learning
+
+## 🔹 What is StandardScaler?
+
+`StandardScaler` standardizes the features by removing the mean and scaling to unit variance. After scaling:
+
+- **Mean** = 0  
+- **Standard Deviation** = 1  
+
+> ⚠️ This is different from `MinMaxScaler`, which scales data to a fixed range, usually [0,1].
+
+---
+
+## 🔹 Formula
+
+\[
+X_{\text{scaled}} = \frac{X - \mu}{\sigma}
+\]
+
+Where:  
+- \(X\) = original value  
+- \(\mu\) = mean of the data  
+- \(\sigma\) = standard deviation of the data  
+
+---
+
+## 🔹 Step-by-Step Example
+
+### Original Data
+### Step 1: Calculate the Mean (\(\mu\))
+\[
+\mu = \frac{2 + 3 + 5 + 6 + 6}{5} = 4.4
+\]
+
+### Step 2: Calculate the Standard Deviation (\(\sigma\))
+\[
+\sigma = \sqrt{\frac{(2-4.4)^2 + (3-4.4)^2 + (5-4.4)^2 + (6-4.4)^2 + (6-4.4)^2}{5}}
+\]
+
+\[
+\sigma \approx 1.6248
+\]
+
+### Step 3: Standardize Each Value
+\[
+Z = \frac{X - \mu}{\sigma}
+\]
+
+| Original \(X\) | Standardized \(Z\) |
+|----------------|------------------|
+| 2              | -1.477           |
+| 3              | -0.862           |
+| 5              | 0.369            |
+| 6              | 0.985            |
+| 6              | 0.985            |
+
+### Step 4: Final Output
+[[-1.4770999 ]
+[-0.86164044]
+[ 0.36944548]
+[ 0.98485496]
+[ 0.98485496]]
+
+----
+
+## 🔹 Summary
+
+| Scaler          | Range / Centering |
+|-----------------|-----------------|
+| MinMaxScaler    | Scales values to [0,1] |
+| StandardScaler  | Centers data around 0 with standard deviation 1 |
+
+---
+
+## 🔹 When to Use
+
+Use `StandardScaler` when you want your features to have **similar scale** and be **centered around 0**.  
+This is important for algorithms like:  
+
+- Support Vector Machines (SVM)  
+- K-Nearest Neighbors (KNN)  
+- Logistic Regression  
+- Neural Networks  
+
+---
+
+
